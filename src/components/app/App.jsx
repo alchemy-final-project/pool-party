@@ -4,6 +4,10 @@ import {
   useStripe,
   useElements
 } from '@stripe/react-stripe-js';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import OwnerSignUp from '../../containers/OwnerSignUp';
+
+
 function App() {
   const stripe = useStripe();
   const elements = useElements();
@@ -19,13 +23,25 @@ function App() {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({ paymentMethod: paymentMethod.id })
-    })
-  }
+    });
+  };
+
   return (
-    <form onSubmit={handleSubmit}>
-      <CardElement />
-      <button>Submit</button>
-    </form>
+    <>
+
+      <Router>
+        <Switch>
+          <Route path="/ownerSignup" component={OwnerSignUp} />
+        </Switch>
+      </Router>
+      <br/>
+      <hr/>
+      <form onSubmit={handleSubmit}>
+        <CardElement />
+        <button>Submit</button>
+      </form>
+      
+    </>
   );
 }
 export default App;
