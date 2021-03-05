@@ -31,7 +31,7 @@ _Questions or comments can be directed to [Erik Graciosa](erikgraciosa@gmail.com
 
 ## External API
 
-* [Stripe API](https://spoonacular.com/food-api)
+* [Stripe API](https://stripe.com/docs/api)
 
 ### License
 
