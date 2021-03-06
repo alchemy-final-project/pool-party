@@ -1,6 +1,6 @@
 Wireframes
 
-<img src="./images/wwireframes.PNG"
+<img src="./images/wireframes.PNG"
      alt="wireframes"
      width="300px" />
 
