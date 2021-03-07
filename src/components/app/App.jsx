@@ -9,7 +9,6 @@ import OwnerSignUp from '../../containers/OwnerSignUp';
 import TenantLogin from '../../containers/TenantLogin';
 import TenantSignUp from '../../containers/TenantSignUp';
 
-
 function App() {
   const stripe = useStripe();
   const elements = useElements();
