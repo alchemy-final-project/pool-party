@@ -36,3 +36,6 @@ _Questions or comments can be directed to [Erik Graciosa](erikgraciosa@gmail.com
 ### License
 
 Copyright (c) 2020 **_Erik Graciosa, Katie Berry, Rosalie Lee_**
+
+### User Stories
+* [UserStories](https://miro.com/app/board/o9J_lRqbG3Y=/)
