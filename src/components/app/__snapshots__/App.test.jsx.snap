@@ -38,6 +38,11 @@ exports[`App component renders App 1`] = `
         </button>
       </form>
     </div>
+    <a
+      href="/tenantSignUp"
+    >
+      Need to signup? Click here.
+    </a>
   </div>
   <br />
   <hr />

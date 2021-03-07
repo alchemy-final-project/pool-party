@@ -7,7 +7,7 @@ import {
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import OwnerSignUp from '../../containers/OwnerSignUp';
 import TenantLogin from '../../containers/TenantLogin';
-
+import TenantSignUp from '../../containers/TenantSignUp';
 
 function App() {
   const stripe = useStripe();
@@ -33,6 +33,7 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/" component={TenantLogin} />
+          <Route exact path="/tenantSignup" component={TenantSignUp} />
           <Route exact path="/ownerSignup" component={OwnerSignUp} />
         </Switch>
       </Router>
