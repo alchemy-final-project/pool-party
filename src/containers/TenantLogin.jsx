@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import TenantLoginForm from '../components/tenantLoginForm/TenantLoginForm';
+import Logo from '../components/logo/Logo';
 
 function TenantLogin() {
   const [email, setEmail] = useState('');
@@ -22,6 +23,7 @@ function TenantLogin() {
   console.log(email, password);
   return (
     <div>
+      <Logo />
       <TenantLoginForm
         email={email}
         password={password} 

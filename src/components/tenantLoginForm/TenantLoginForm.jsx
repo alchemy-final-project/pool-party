@@ -11,7 +11,6 @@ function TenantLoginForm({
 }) {
   return (
     <div>
-      <p>Sample Text</p>
       <form 
         onSubmit={login}
         className={styles.loginForm}>
