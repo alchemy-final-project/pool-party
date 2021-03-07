@@ -2,8 +2,47 @@
 
 exports[`App component renders App 1`] = `
 <DocumentFragment>
+  <div>
+    <div>
+      <p>
+        Pool Party
+      </p>
+      <img
+        src="../../src/images/beachball.jpg"
+      />
+    </div>
+    <div>
+      <form
+        class="loginForm"
+      >
+        <label>
+          Email
+        </label>
+        <input
+          placeholder="Enter email as username"
+          required=""
+          type="plain/text"
+          value=""
+        />
+        <label>
+          Password
+        </label>
+        <input
+          placeholder="Type Password"
+          required=""
+          type="password"
+          value=""
+        />
+        <button>
+          Log In
+        </button>
+      </form>
+    </div>
+  </div>
   <br />
   <hr />
+  <br />
+  <br />
   <form>
     <div />
     <button>
