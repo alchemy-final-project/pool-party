@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import TenantLoginForm from '../components/tenantLoginForm/TenantLoginForm';
 import Logo from '../components/logo/Logo';
 
@@ -29,6 +30,7 @@ function TenantLogin() {
         login={login}
         onChangeEmail={onChangeEmail}
         onChangePassword={onChangePassword}/>
+      <Link to="/tenantSignUp">Need to signup? Click here.</Link>
     </div>
   );
 }
