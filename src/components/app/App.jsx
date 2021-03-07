@@ -6,6 +6,7 @@ import {
 } from '@stripe/react-stripe-js';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import OwnerSignUp from '../../containers/OwnerSignUp';
+import TenantLogin from '../../containers/TenantLogin';
 
 
 function App() {
@@ -31,11 +32,14 @@ function App() {
 
       <Router>
         <Switch>
-          <Route path="/ownerSignup" component={OwnerSignUp} />
+          <Route exact path="/" component={TenantLogin} />
+          <Route exact path="/ownerSignup" component={OwnerSignUp} />
         </Switch>
       </Router>
       <br/>
       <hr/>
+      <br/>
+      <br/>
       <form onSubmit={handleSubmit}>
         <CardElement />
         <button>Submit</button>
