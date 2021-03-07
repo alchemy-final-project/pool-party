@@ -1,0 +1,8 @@
+.loginForm {
+  display: flex;
+  flex-direction: column;
+}
+
+select, label, input, button {
+  margin: auto;
+}
