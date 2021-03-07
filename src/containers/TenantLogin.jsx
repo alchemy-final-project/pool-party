@@ -20,7 +20,6 @@ function TenantLogin() {
     console.log('login clicked');
   };
 
-  console.log(email, password);
   return (
     <div>
       <Logo />
