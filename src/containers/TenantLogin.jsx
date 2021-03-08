@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import TenantLoginForm from '../components/tenantLoginForm/TenantLoginForm';
 import Logo from '../components/logo/Logo';
+import { loginPost } from '../services/login.js';
 
 function TenantLogin() {
   const [email, setEmail] = useState('');
@@ -19,6 +20,7 @@ function TenantLogin() {
     event.preventDefault();
     //Change this to provide the email/password to the backend route 
     console.log('login clicked');
+    loginPost(email, password);
   };
 
   return (

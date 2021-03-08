@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import TenantSignUpForm from '../components/tenantSignUpForm/TenantSignUpForm';
-
+import { signup } from '../services/signup.js';
 
 function TenantSignUp() {
   const [fullName, setFullName] = useState('');
@@ -8,6 +8,7 @@ function TenantSignUp() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [rent, setRent] = useState('');
+  const ownerId = 1;
 
   const onChangeFullName = (value) => {
     setFullName(value);
@@ -31,9 +32,10 @@ function TenantSignUp() {
 
   const login = (event) => {
     event.preventDefault();
-    //Change this to provide the email/password/rent/etc to the backend route 
+    
     console.log('login clicked');
-    //On success this needs to send user to dashboard
+
+    signup(fullName, address, rent, ownerId, email, password);
   };
 
   console.log(fullName, address, email, rent);
