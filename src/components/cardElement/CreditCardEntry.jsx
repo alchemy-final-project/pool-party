@@ -5,9 +5,33 @@ import {
   useElements
 } from '@stripe/react-stripe-js';
 
+const CARD_ELEMENT_OPTIONS = {
+  iconStyle: 'solid',
+  hidePostalCode: true,
+  style: {
+    base: {
+      iconColor: 'rgb(240, 57, 122)',
+      color: 'rgb(240, 57, 122)',
+      fontSize: '16px',
+      fontFamily: '"Open Sans", sans-serif',
+      fontSmoothing: 'antialiased',
+      '::placeholder': {
+        color: '#CFD7DF'
+      }
+    },
+    invalid: {
+      color: '#e5424d',
+      ':focus': {
+        color: '#303238'
+      }
+    }
+  }
+};
+
 function CreditCardEntry() {
   const stripe = useStripe();
   const elements = useElements();
+
   const handleSubmit = async(event) => {
     event.preventDefault();
     const { error, paymentMethod } = await stripe.createPaymentMethod({
@@ -26,7 +50,7 @@ function CreditCardEntry() {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <CardElement />
+        <CardElement options={CARD_ELEMENT_OPTIONS}/>
         <button>Submit</button>
       </form>
     </div>

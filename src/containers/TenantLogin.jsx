@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import TenantLoginForm from '../components/tenantLoginForm/TenantLoginForm';
 import Logo from '../components/logo/Logo';
+const URL = 'https://pool-party-staging.herokuapp.com';
 
 function TenantLogin() {
   const [email, setEmail] = useState('');
@@ -19,6 +20,16 @@ function TenantLogin() {
     event.preventDefault();
     //Change this to provide the email/password to the backend route 
     console.log('login clicked');
+    fetch(`${URL}/api/v1/auth/login`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ 
+        email,
+        password,
+      })
+    });
   };
 
   return (
