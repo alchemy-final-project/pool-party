@@ -4,14 +4,11 @@ exports[`App component renders App 1`] = `
 <DocumentFragment>
   <div>
     <h1>
-      HEADER PLACEHOLDER + Navigation
+      POOL PARTY + Navigation
     </h1>
   </div>
   <div>
     <div>
-      <p>
-        Pool Party
-      </p>
       <img
         src="../../src/images/beachball.jpg"
       />
