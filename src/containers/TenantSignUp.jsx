@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import TenantSignUpForm from '../components/tenantSignUpForm/TenantSignUpForm';
-const URL = 'https://pool-party-staging.herokuapp.com';
+import { signup } from '../services/signup.js';
 
 function TenantSignUp() {
   const [fullName, setFullName] = useState('');
@@ -32,23 +32,10 @@ function TenantSignUp() {
 
   const login = (event) => {
     event.preventDefault();
-    //Change this to provide the email/password/rent/etc to the backend route 
+    
     console.log('login clicked');
-    //On success this needs to send user to dashboard
-    fetch(`${URL}/api/v1/auth/signup`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ 
-        name: fullName,
-        propertyAddress: address,
-        monthlyCost: rent,
-        ownerId,
-        email,
-        password,
-      })
-    });
+
+    signup(fullName, address, rent, ownerId, email, password);
   };
 
   console.log(fullName, address, email, rent);
