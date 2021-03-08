@@ -36,7 +36,7 @@ function TenantSignUpForm({
           required>
         </input>
         <label>Full Apartment Address</label>
-        <input 
+        <input onDragStart
           type="plain/text"
           placeholder="Enter full address"
           value={address}
