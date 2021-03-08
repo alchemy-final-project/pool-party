@@ -3,6 +3,11 @@
 exports[`App component renders App 1`] = `
 <DocumentFragment>
   <div>
+    <h1>
+      HEADER PLACEHOLDER + Navigation
+    </h1>
+  </div>
+  <div>
     <div>
       <p>
         Pool Party
@@ -44,15 +49,5 @@ exports[`App component renders App 1`] = `
       Need to signup? Click here.
     </a>
   </div>
-  <br />
-  <hr />
-  <br />
-  <br />
-  <form>
-    <div />
-    <button>
-      Submit
-    </button>
-  </form>
 </DocumentFragment>
 `;
