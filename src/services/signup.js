@@ -6,7 +6,8 @@ export const signup = (fullName, address, rent, ownerId, email, password) => {
     headers: {
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify({ 
+    credentials: 'include',
+    body: JSON.stringify({
       name: fullName,
       propertyAddress: address,
       monthlyCost: rent,
