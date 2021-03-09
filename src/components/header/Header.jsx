@@ -6,7 +6,7 @@ function Header() {
 
   return (
     <div className="header">
-      <h1>POOL PARTY + Navigation</h1>
+      <h1>POOL PARTY + Header</h1>
       <img className="logo" src="" alt="" />
       <ul className="header_links" >
         <li><Link exact to="/">Home</Link></li>
