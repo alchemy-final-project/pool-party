@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import TenantLoginForm from '../components/tenantLoginForm/TenantLoginForm';
 import Logo from '../components/logo/Logo';
-import { loginPost } from '../services/login.js';
+import { loginPost } from '../services/auth.js';
 
 function TenantLogin() {
   const [email, setEmail] = useState('');
@@ -28,10 +28,10 @@ function TenantLogin() {
       <Logo />
       <TenantLoginForm
         email={email}
-        password={password} 
+        password={password}
         login={login}
         onChangeEmail={onChangeEmail}
-        onChangePassword={onChangePassword}/>
+        onChangePassword={onChangePassword} />
       <Link to="/tenantSignUp">Need to signup? Click here.</Link>
     </div>
   );

@@ -2,22 +2,20 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './TenantSignUpForm.css';
 
-function TenantSignUpForm({ 
+function TenantSignUpForm({
   fullName,
-  address,
   email,
   password,
   rent,
   login,
   onChangeFullName,
-  onChangeAddress,
   onChangeEmail,
   onChangePassword,
   onChangeRent
 }) {
   return (
     <div>
-      <form 
+      <form
         onSubmit={login}
         className={styles.loginForm}>
         <label>Find Your Property</label>
@@ -28,42 +26,34 @@ function TenantSignUpForm({
           <option value="acct3">Account 3</option>
         </select>
         <label>Name</label>
-        <input 
+        <input
           type="plain/text"
           placeholder="Enter First and Last Name"
           value={fullName}
-          onChange={(event) => {onChangeFullName(event.target.value);}}
-          required>
-        </input>
-        <label>Full Apartment Address</label>
-        <input onDragStart
-          type="plain/text"
-          placeholder="Enter full address"
-          value={address}
-          onChange={(event) => {onChangeAddress(event.target.value);}}
+          onChange={(event) => { onChangeFullName(event.target.value); }}
           required>
         </input>
         <label>Email</label>
-        <input 
+        <input
           type="plain/text"
           placeholder="Enter email as username"
           value={email}
-          onChange={(event) => {onChangeEmail(event.target.value);}}
+          onChange={(event) => { onChangeEmail(event.target.value); }}
           required>
         </input>
         <label>Password</label>
-        <input 
+        <input
           type="password"
           placeholder="Type Password"
           value={password}
-          onChange={(event) => {onChangePassword(event.target.value);}}
+          onChange={(event) => { onChangePassword(event.target.value); }}
           required></input>
         <label>Rent</label>
-        <input 
+        <input
           type="plain/text"
           placeholder="Enter Rent in Dollars Here"
           value={rent}
-          onChange={(event) => {onChangeRent(event.target.value);}}
+          onChange={(event) => { onChangeRent(event.target.value); }}
           required></input>
         <button>Log In</button>
       </form>
@@ -73,13 +63,11 @@ function TenantSignUpForm({
 
 TenantSignUpForm.propTypes = {
   fullName: PropTypes.string,
-  address: PropTypes.string,
   email: PropTypes.string,
   password: PropTypes.string,
   rent: PropTypes.string,
   login: PropTypes.func.isRequired,
   onChangeFullName: PropTypes.func.isRequired,
-  onChangeAddress: PropTypes.func.isRequired,
   onChangeEmail: PropTypes.func.isRequired,
   onChangePassword: PropTypes.func.isRequired,
   onChangeRent: PropTypes.func.isRequired,

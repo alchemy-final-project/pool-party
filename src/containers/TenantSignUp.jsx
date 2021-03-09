@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import TenantSignUpForm from '../components/tenantSignUpForm/TenantSignUpForm';
-import { signup } from '../services/signup.js';
+import { signup } from '../services/auth.js';
 
 function TenantSignUp() {
   const [fullName, setFullName] = useState('');
-  const [address, setAddress] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [rent, setRent] = useState('');
@@ -12,10 +11,6 @@ function TenantSignUp() {
 
   const onChangeFullName = (value) => {
     setFullName(value);
-  };
-
-  const onChangeAddress = (value) => {
-    setAddress(value);
   };
 
   const onChangeEmail = (value) => {
@@ -32,32 +27,29 @@ function TenantSignUp() {
 
   const login = (event) => {
     event.preventDefault();
-    
+
     console.log('login clicked');
 
-    signup(fullName, address, rent, ownerId, email, password);
+    signup(fullName, rent, ownerId, email, password);
   };
 
-  console.log(fullName, address, email, rent);
   return (
     <div>
       <p>This is the SIGN UP PAGE</p>
       <p>This is the SIGN UP PAGE</p>
       <p>This is the SIGN UP PAGE</p>
       <p>This is the SIGN UP PAGE</p>
-      <hr/>
-      <TenantSignUpForm 
+      <hr />
+      <TenantSignUpForm
         fullName={fullName}
-        address={address}
         email={email}
         password={password}
-        rent={rent} 
+        rent={rent}
         login={login}
         onChangeFullName={onChangeFullName}
-        onChangeAddress={onChangeAddress}
         onChangeEmail={onChangeEmail}
         onChangePassword={onChangePassword}
-        onChangeRent={onChangeRent}/>
+        onChangeRent={onChangeRent} />
     </div>
   );
 }
