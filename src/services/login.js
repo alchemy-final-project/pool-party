@@ -6,7 +6,8 @@ export const loginPost = (email, password) => {
     headers: {
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify({ 
+    credentials: 'include',
+    body: JSON.stringify({
       email,
       password,
     })
