@@ -11,7 +11,7 @@ function Header() {
       <ul className="header_links" >
         <li><Link exact to="/">Home</Link></li>
         <li><Link to="/about">About Us</Link></li>
-        <li><Link>Owner Sign Up</Link></li>
+        <li><Link to="/ownerSignup">Owner Sign Up</Link></li>
       </ul>
     </div>
   );
