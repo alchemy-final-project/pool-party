@@ -10,7 +10,7 @@ exports[`App component renders App 1`] = `
   <div>
     <div>
       <img
-        src="../../src/images/beachball.jpg"
+        src="/path/image"
       />
     </div>
     <div>
