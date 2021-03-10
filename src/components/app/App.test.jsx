@@ -5,6 +5,7 @@ import {
   Elements
 } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
+import { MemoryRouter } from 'react-router';
 
 const stripePromise = loadStripe('pk_test_51IQLH1AlZQgGODSJBkoELcpjSB9liGgfLpot9mWQER1Cv9RCBpLnvhdrDPORukS3YQoeQ4OHq04EC95pX1GrnAHY00rW9sayk4');
 
@@ -13,7 +14,9 @@ describe('App component', () => {
   it('renders App', () => {
     const { asFragment } = render(
       <Elements stripe={stripePromise}>
-        <App />
+        <MemoryRouter>
+          <App />
+        </MemoryRouter>
       </Elements>);
     expect(asFragment()).toMatchSnapshot();
   });
