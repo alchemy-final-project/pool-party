@@ -1,13 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
 import TenantSignUpForm from '../components/tenantSignUpForm/TenantSignUpForm';
 import { signup } from '../services/auth.js';
+import { getAllOwners } from '../services/owners';
 
 function TenantSignUp() {
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [rent, setRent] = useState('');
-  const ownerId = 1;
+  const [owners, setOwners] = useState([]);
+  const [selectedOwner, setSelectedOwner] = useState('');
+  const history = useHistory();
+
+  useEffect(() => {
+    getAllOwners()
+      .then(owners => {
+        setOwners(owners);
+      });
+  }, []);
+
+  const onOwnerChange = (value) => {
+    setSelectedOwner(value);
+  }
 
   const onChangeFullName = (value) => {
     setFullName(value);
@@ -25,12 +40,10 @@ function TenantSignUp() {
     setRent(value);
   };
 
-  const login = (event) => {
+  const signUp = (event) => {
     event.preventDefault();
-
-    console.log('login clicked');
-
-    signup(fullName, rent, ownerId, email, password);
+    signup(fullName, rent, selectedOwner, email, password)
+    history.push('/dashboard');
   };
 
   return (
@@ -41,11 +54,13 @@ function TenantSignUp() {
       <p>This is the SIGN UP PAGE</p>
       <hr />
       <TenantSignUpForm
+        owners={owners}
+        onOwnerChange={onOwnerChange}
         fullName={fullName}
         email={email}
         password={password}
         rent={rent}
-        login={login}
+        signUp={signUp}
         onChangeFullName={onChangeFullName}
         onChangeEmail={onChangeEmail}
         onChangePassword={onChangePassword}
