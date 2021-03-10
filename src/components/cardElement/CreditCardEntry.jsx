@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import {
   CardElement
 } from '@stripe/react-stripe-js';
-import { post } from '../../services/request';
+import './CreditCardEntry.css';
+
 
 const CARD_ELEMENT_OPTIONS = {
   iconStyle: 'solid',
@@ -28,7 +29,9 @@ const CARD_ELEMENT_OPTIONS = {
   }
 };
 
+
 function CreditCardEntry({ handleSubmit }) {
+
   return (
     <div>
       <form onSubmit={handleSubmit}>
