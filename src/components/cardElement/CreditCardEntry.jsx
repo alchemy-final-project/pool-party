@@ -39,16 +39,11 @@ function CreditCardEntry() {
       type: 'card',
       card: elements.getElement(CardElement),
     });
-    
-
     post('/api/v1/transactions', {
       paymentMethodId: paymentMethod.id,
       rentYear: 2021,
       rentMonth: 5
-    }
-
-    );
-
+    });
   };
 
   return (
