@@ -5,6 +5,7 @@ import {
 } from '@stripe/react-stripe-js';
 import './CreditCardEntry.css';
 
+
 const CARD_ELEMENT_OPTIONS = {
   iconStyle: 'solid',
   hidePostalCode: true,
@@ -28,7 +29,9 @@ const CARD_ELEMENT_OPTIONS = {
   }
 };
 
+
 function CreditCardEntry({ handleSubmit }) {
+
   return (
     <div>
       <form onSubmit={handleSubmit}>
