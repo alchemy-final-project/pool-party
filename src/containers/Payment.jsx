@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import CreditCardEntry from '../components/cardElement/CreditCardEntry';
 import DateDropdowns from '../components/dateDropdowns/DateDropdowns';
 import {
@@ -11,6 +12,7 @@ import { post } from '../services/request';
 function Payment() {
   const [rentYear, setRentYear] = useState('2021');
   const [rentMonth, setRentMonth] = useState('1');
+  const history = useHistory();
  
   const onRentYearChange = (value) => {
     setRentYear(value);
@@ -35,6 +37,7 @@ function Payment() {
       rentYear,
       rentMonth
     });
+    history.push('/dashboard');
   };
 
   return (

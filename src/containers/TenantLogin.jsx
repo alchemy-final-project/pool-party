@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import TenantLoginForm from '../components/tenantLoginForm/TenantLoginForm';
 import Logo from '../components/logo/Logo';
 import { loginPost } from '../services/auth.js';
@@ -7,6 +7,7 @@ import { loginPost } from '../services/auth.js';
 function TenantLogin() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const history = useHistory();
 
   const onChangeEmail = (value) => {
     setEmail(value);
@@ -18,9 +19,8 @@ function TenantLogin() {
 
   const login = (event) => {
     event.preventDefault();
-    //Change this to provide the email/password to the backend route 
-    console.log('login clicked');
     loginPost(email, password);
+    history.push('./dashboard');
   };
 
   return (
