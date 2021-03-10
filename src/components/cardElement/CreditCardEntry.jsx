@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {
   CardElement
 } from '@stripe/react-stripe-js';
-import './CreditCardEntry.css';
+import { post } from '../../services/request';
 
 const CARD_ELEMENT_OPTIONS = {
   iconStyle: 'solid',
