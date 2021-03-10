@@ -4,6 +4,7 @@ import {
   useStripe,
   useElements
 } from '@stripe/react-stripe-js';
+import { post } from '../../services/request';
 
 const CARD_ELEMENT_OPTIONS = {
   iconStyle: 'solid',
@@ -38,16 +39,10 @@ function CreditCardEntry() {
       type: 'card',
       card: elements.getElement(CardElement),
     });
-    fetch('http://localhost:7890/api/v1/transactions', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ 
-        paymentMethod: paymentMethod.id,
-        rentYear: 2021,
-        rentMonth: 5
-      }) //Hardcoded month and year
+    post('/api/v1/transactions', {
+      paymentMethodId: paymentMethod.id,
+      rentYear: 2021,
+      rentMonth: 5
     });
   };
 
