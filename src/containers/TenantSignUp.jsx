@@ -7,7 +7,7 @@ function TenantSignUp() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [rent, setRent] = useState('');
-  const ownerId = 2;
+  const ownerId = 1;
 
   const onChangeFullName = (value) => {
     setFullName(value);
