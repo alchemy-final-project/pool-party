@@ -10,7 +10,7 @@ function TenantSignUp() {
   const [password, setPassword] = useState('');
   const [rent, setRent] = useState('');
   const [owners, setOwners] = useState([]);
-  const [selectedOwner, setSelectedOwner] = useState('');
+  const [selectedOwner, setSelectedOwner] = useState('1');
   const history = useHistory();
 
   useEffect(() => {
