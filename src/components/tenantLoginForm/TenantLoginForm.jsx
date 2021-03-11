@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import styles from './TenantLoginForm.css';
+// import water from '../../images/water.jpg';
 
 function TenantLoginForm({
   email,
@@ -34,6 +35,7 @@ function TenantLoginForm({
             required></input>
 
           <button>Log In</button>
+
           <Link to="/tenantSignUp" style={{ fontFamily: "Bebas Neue", color: "rgb(251, 255, 248)", justifyContent: "center" }}>Need to signup? Click here</Link>
         </form>
       </div>

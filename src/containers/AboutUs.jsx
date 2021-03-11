@@ -7,7 +7,12 @@ import rosalie from '../images/rosalie.jpg';
 import erik from '../images/erik.jpg';
 
 const AboutUs = () => (
-  <div>
+  <div
+  // style={{
+  //   backgroundImage: `url(${pink})`,
+  //   backgroundRepeat: 'no-repeat',
+  // }}
+  >
     <div className={styles.AboutUs}>
       {/* <h1>About Us</h1> */}
       <div className={styles.container} style={{ marginTop: "9vh" }}>
