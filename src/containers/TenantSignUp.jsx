@@ -48,11 +48,6 @@ function TenantSignUp() {
 
   return (
     <div>
-      <p>This is the SIGN UP PAGE</p>
-      <p>This is the SIGN UP PAGE</p>
-      <p>This is the SIGN UP PAGE</p>
-      <p>This is the SIGN UP PAGE</p>
-      <hr />
       <TenantSignUpForm
         owners={owners}
         onOwnerChange={onOwnerChange}

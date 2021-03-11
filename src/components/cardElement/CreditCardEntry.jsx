@@ -35,7 +35,8 @@ function CreditCardEntry({ handleSubmit }) {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <CardElement options={CARD_ELEMENT_OPTIONS}/>
+        <CardElement options={CARD_ELEMENT_OPTIONS} />
+
         <button>Submit</button>
       </form>
     </div>

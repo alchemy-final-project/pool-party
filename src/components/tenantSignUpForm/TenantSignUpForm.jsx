@@ -18,46 +18,53 @@ function TenantSignUpForm({
 }) {
 
   return (
-    <div>
-      <form
-        onSubmit={signUp}
-        className={styles.loginForm}>
-        <OwnerDropDown
-          owners={owners}
-          onOwnerChange={onOwnerChange} />
-        <label>Name</label>
-        <input
-          type="plain/text"
-          placeholder="Enter First and Last Name"
-          value={fullName}
-          onChange={(event) => { onChangeFullName(event.target.value); }}
-          required>
-        </input>
-        <label>Email</label>
-        <input
-          type="plain/text"
-          placeholder="Enter email as username"
-          value={email}
-          onChange={(event) => { onChangeEmail(event.target.value); }}
-          required>
-        </input>
-        <label>Password</label>
-        <input
-          type="password"
-          placeholder="Type Password"
-          value={password}
-          onChange={(event) => { onChangePassword(event.target.value); }}
-          required></input>
-        <label>Rent</label>
-        <input
-          type="plain/text"
-          placeholder="Enter Rent in Dollars Here"
-          value={rent}
-          onChange={(event) => { onChangeRent(event.target.value); }}
-          required></input>
-        <button>Sign Up</button>
-      </form>
-    </div>
+    <>
+      <div className={styles.TenantSignUpForm}>
+        <h1>SignUp</h1>
+        <form
+          onSubmit={signUp}>
+          <OwnerDropDown
+            owners={owners}
+            onOwnerChange={onOwnerChange} />
+
+          <label>Name</label>
+          <input
+            type="plain/text"
+            placeholder="Enter First and Last Name"
+            value={fullName}
+            onChange={(event) => { onChangeFullName(event.target.value); }}
+            required>
+          </input>
+
+          <label>Email</label>
+          <input
+            type="plain/text"
+            placeholder="Enter email as username"
+            value={email}
+            onChange={(event) => { onChangeEmail(event.target.value); }}
+            required>
+          </input>
+
+          <label>Password</label>
+          <input
+            type="password"
+            placeholder="Type Password"
+            value={password}
+            onChange={(event) => { onChangePassword(event.target.value); }}
+            required></input>
+
+          <label>Rent</label>
+          <input
+            type="plain/text"
+            placeholder="Enter Rent in Dollars Here"
+            value={rent}
+            onChange={(event) => { onChangeRent(event.target.value); }}
+            required></input>
+
+          <button>Sign Up</button>
+        </form>
+      </div>
+    </>
   );
 }
 

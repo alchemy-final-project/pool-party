@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import TenantLoginForm from '../components/tenantLoginForm/TenantLoginForm';
-import Logo from '../components/logo/Logo';
+// import Logo from '../components/logo/Logo';
 import { loginPost } from '../services/auth.js';
 
 function TenantLogin() {
@@ -25,7 +25,7 @@ function TenantLogin() {
 
   return (
     <div>
-      <Logo />
+      {/* <Logo /> */}
       <TenantLoginForm
         email={email}
         password={password}
