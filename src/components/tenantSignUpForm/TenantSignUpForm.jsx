@@ -20,7 +20,7 @@ function TenantSignUpForm({
   return (
     <>
       <div className={styles.TenantSignUpForm}>
-        <h1>SignUp</h1>
+        {/* <h1>SignUp</h1> */}
         <form
           onSubmit={signUp}>
           <OwnerDropDown

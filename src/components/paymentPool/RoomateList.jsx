@@ -16,7 +16,7 @@ const RoomateList = ({ roomates }) => {
         </div>
     ));
 
-    return <ul className={styles.RoomateList}
+    return <ul className={styles.RoomateList} style={{ marginTop: "300px" }}
         data-testid="roomates">
         {roomateElements}
     </ul>

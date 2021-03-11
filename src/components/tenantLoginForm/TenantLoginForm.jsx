@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import styles from './TenantLoginForm.css';
-// import water from '../../images/water.jpg';
 
 function TenantLoginForm({
   email,
@@ -12,9 +12,8 @@ function TenantLoginForm({
 }) {
   return (
     <>
-      {/* <img src={water} type='image' alt="water reflection" /> */}
       <div className={styles.TenantLoginForm}>
-        <h1>Login</h1>
+        {/* <h1>Login</h1> */}
         <form
           onSubmit={login}>
 
@@ -35,6 +34,7 @@ function TenantLoginForm({
             required></input>
 
           <button>Log In</button>
+          <Link to="/tenantSignUp" style={{ fontFamily: "Bebas Neue", color: "rgb(251, 255, 248)", justifyContent: "center" }}>Need to signup? Click here</Link>
         </form>
       </div>
     </>
