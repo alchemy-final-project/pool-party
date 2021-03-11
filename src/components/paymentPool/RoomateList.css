@@ -1,0 +1,4 @@
+.RoomateList {
+    display: flexbox;
+    flex-wrap: wrap;
+  }
