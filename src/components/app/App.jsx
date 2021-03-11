@@ -12,8 +12,8 @@ function App() {
 
   return (
     <>
-      <Navbar/>
       <Router>
+        <Navbar/>
         <Switch>
           <Route exact path="/" component={TenantLogin} />
           <Route exact path="/tenantSignup" component={TenantSignUp} />
