@@ -6,34 +6,35 @@ const AboutUs = () => (
   <div>
     <div className={styles.AboutUs}>
       <h1>About Us</h1>
-      <div className="container">
-        <img className="profile-pic" src={img} type='image' alt="beachball" />
-        <div className="name-text">
+      <div className={styles.container}>
+        <img
+          src={img} type='image' alt="beachball" />
+        <div className={styles.nametext}>
 
-          <h2 className="name">Rosalie Lee</h2>
-          <p className="about-text">
+          <h2 className={styles.name}>Rosalie Lee</h2>
+          <p className={styles.abouttext}>
             Rosalie is awesome!
         </p>
         </div>
       </div>
 
-      <div className="container">
-        <img className="profile-pic" src={img} type='image' alt="beachball" />
-        <div className="name-text">
+      <div className={styles.container}>
+        <img src={img} type='image' alt="beachball" />
+        <div className={styles.nametext}>
 
-          <h2 className="name">Erik Graciosa</h2>
-          <p className="about-text">
+          <h2 className={styles.name}>Erik Graciosa</h2>
+          <p className={styles.abouttext}>
             Erik is awesome!
         </p>
         </div>
       </div>
 
-      <div className="container">
-        <img className="profile-pic" src={img} type='image' alt="beachball" />
-        <div className="name-text">
+      <div className={styles.container}>
+        <img src={img} type='image' alt="beachball" />
+        <div className={styles.nametext}>
 
-          <h2 className="name">Katie Berry</h2>
-          <p className="about-text">
+          <h2 className={styles.name}>Katie Berry</h2>
+          <p className={styles.abouttext}>
             Katie is awesome!
         </p>
         </div>
