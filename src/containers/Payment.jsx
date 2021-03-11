@@ -43,7 +43,7 @@ function Payment() {
 
   return (
     <div className={styles.Payment}>
-      <h1>Entry Credit Card Here to Pay into the Party</h1>
+      {/* <h1>Entry Credit Card Here to Pay into the Party</h1> */}
 
       <p>Need to have a get call to get the amount</p>
       <p>/ Add the amount with a future get</p>
