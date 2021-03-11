@@ -20,6 +20,6 @@ label, input, button {
   }
   
   select:focus {
-    border: 5px solid hotpink;
+    border: 5px solid magenta;
   }
 }
