@@ -19,8 +19,9 @@ function TenantLogin() {
 
   const login = (event) => {
     event.preventDefault();
-    loginPost(email, password);
-    history.push('./dashboard');
+    loginPost(email, password)
+      .then(() => history.push('./dashboard'));
+    
   };
 
   return (
