@@ -1,22 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useRoomates } from './Roomates';
+import styles from './RoomateList.css';
 
 const RoomateList = ({ roomates }) => {
     const roomateElements = roomates.map(roomate => (
-        <>
+        <div className={styles.container}>
             <li key={roomate.id}>
                 {roomate.name}
             </li >
 
             <li key={roomate.id}>
-                {roomate.monthlyCost}
+                ${roomate.monthlyCost}
             </li>
-        </>
+
+        </div>
     ));
 
-    return <ul
-        // className={`${styles.RoomateList}`}
+    return <ul className={styles.RoomateList}
         data-testid="roomates">
         {roomateElements}
     </ul>

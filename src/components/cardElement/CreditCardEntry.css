@@ -1,6 +1,8 @@
 form {
   padding: 10px;
-  background-color: sandybrown;
+  background-color: rgba(17, 15, 15, 0.685);
   width: 400px;
-  margin: auto;
+  margin: 0;
+  position: absolute;
+  top: 40%;
 }

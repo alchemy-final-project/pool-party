@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './OwnerDropDown.css';
 
 const OwnerDropDown = ({ owners, onOwnerChange }) => {
     const ownerElements = owners.map(owner =>
@@ -7,7 +8,7 @@ const OwnerDropDown = ({ owners, onOwnerChange }) => {
     );
 
     return (
-        <div>
+        <div className={styles.OwnerDropDown}>
             <label>Choose Your Property
             <select onChange={(event) => onOwnerChange(event.target.value)}>
                     {ownerElements}
