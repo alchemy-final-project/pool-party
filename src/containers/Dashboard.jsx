@@ -1,22 +1,16 @@
-import React, { useEffect } from 'react';
-import { getAllRoomates } from '../services/tenants';
+import React, { useEffect, useState } from 'react';
+import RoomateList from '../components/paymentPool/RoomateList';
+import { useRoomates } from '../components/paymentPool/Roomates';
 
+const Dashboard = () => {
+  const { loading, roomates } = useRoomates();
 
-function Dashboard() {
-  useEffect(() => {
-    getAllRoomates()
-      .then(console.log);
-  }, []);
-
-  return (
-    <div>
-      <p>TENANT DASHBOARD PAGE</p>
-      <p>TENANT DASHBOARD PAGE</p>
-      <p>TENANT DASHBOARD PAGE</p>
-      <p>TENANT DASHBOARD PAGE</p>
-      <button>Pay your bill</button>
-    </div>
-  );
+  if (loading) return <h1>Loading</h1>;
+  return <div>
+    <RoomateList
+      roomates={roomates} />
+    <button>Pay your bill</button>
+  </div>
 }
 
 export default Dashboard;
