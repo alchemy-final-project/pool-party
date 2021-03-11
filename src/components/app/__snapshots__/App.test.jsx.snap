@@ -2,18 +2,54 @@
 
 exports[`App component renders App 1`] = `
 <DocumentFragment>
-  <div
-    class="header"
+  <nav
+    class="navContainer"
   >
-    <h1>
-      POOL PARTY + Header
-    </h1>
-    <img
-      alt=""
+    <div
       class="logo"
-      src=""
-    />
-  </div>
+    >
+      <a
+        aria-current="page"
+        class="active"
+        href="/"
+      >
+        Pool Party
+      </a>
+    </div>
+    <ul
+      class="navMenu"
+    >
+      <li
+        class="navItem"
+      >
+        <a
+          href="/aboutUs"
+        >
+          About Us
+        </a>
+      </li>
+      <li
+        class="navItem"
+      >
+        <a
+          href="/tenantSignup"
+        >
+          Sign Up
+        </a>
+      </li>
+      <li
+        class="navItem"
+      >
+        <a
+          aria-current="page"
+          class="active"
+          href="/"
+        >
+          Login
+        </a>
+      </li>
+    </ul>
+  </nav>
   <div>
     <div>
       <img

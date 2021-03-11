@@ -6,13 +6,14 @@ import TenantSignUp from '../../containers/TenantSignUp';
 import Payment from '../../containers/Payment';
 import Dashboard from '../../containers/Dashboard';
 import AboutUs from '../../containers/AboutUs';
-import Header from '../header/Header';
+import Navbar from '../header/Navbar';
 
 function App() {
+
   return (
     <>
-      <Header/>
       <Router>
+        <Navbar/>
         <Switch>
           <Route exact path="/" component={TenantLogin} />
           <Route exact path="/tenantSignup" component={TenantSignUp} />

@@ -1,10 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
-  CardElement,
-  useStripe,
-  useElements
+  CardElement
 } from '@stripe/react-stripe-js';
-import { post } from '../../services/request';
+import './CreditCardEntry.css';
+
 
 const CARD_ELEMENT_OPTIONS = {
   iconStyle: 'solid',
@@ -29,22 +29,8 @@ const CARD_ELEMENT_OPTIONS = {
   }
 };
 
-function CreditCardEntry() {
-  const stripe = useStripe();
-  const elements = useElements();
 
-  const handleSubmit = async(event) => {
-    event.preventDefault();
-    const { error, paymentMethod } = await stripe.createPaymentMethod({
-      type: 'card',
-      card: elements.getElement(CardElement),
-    });
-    post('/api/v1/transactions', {
-      paymentMethodId: paymentMethod.id,
-      rentYear: 2021,
-      rentMonth: 5
-    });
-  };
+function CreditCardEntry({ handleSubmit }) {
 
   return (
     <div>
@@ -55,5 +41,9 @@ function CreditCardEntry() {
     </div>
   );
 }
+
+CreditCardEntry.propTypes = {
+  handleSubmit: PropTypes.func.isRequired
+};
 
 export default CreditCardEntry;

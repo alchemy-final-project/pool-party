@@ -1,30 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import OwnerDropDown from '../ownerDropDown/OwnerDropDown';
 import styles from './TenantSignUpForm.css';
 
 function TenantSignUpForm({
+  owners,
+  onOwnerChange,
   fullName,
   email,
   password,
   rent,
-  login,
+  signUp,
   onChangeFullName,
   onChangeEmail,
   onChangePassword,
   onChangeRent
 }) {
+
   return (
     <div>
       <form
-        onSubmit={login}
+        onSubmit={signUp}
         className={styles.loginForm}>
-        <label>Find Your Property</label>
-        <select>
-          {/* Change this to populate based on endpoint querying accts */}
-          <option value="acct1">Account 1</option>
-          <option value="acct2">Account 2</option>
-          <option value="acct3">Account 3</option>
-        </select>
+        <OwnerDropDown
+          owners={owners}
+          onOwnerChange={onOwnerChange} />
         <label>Name</label>
         <input
           type="plain/text"
@@ -55,7 +55,7 @@ function TenantSignUpForm({
           value={rent}
           onChange={(event) => { onChangeRent(event.target.value); }}
           required></input>
-        <button>Log In</button>
+        <button>Sign Up</button>
       </form>
     </div>
   );
@@ -66,7 +66,7 @@ TenantSignUpForm.propTypes = {
   email: PropTypes.string,
   password: PropTypes.string,
   rent: PropTypes.string,
-  login: PropTypes.func.isRequired,
+  signUp: PropTypes.func.isRequired,
   onChangeFullName: PropTypes.func.isRequired,
   onChangeEmail: PropTypes.func.isRequired,
   onChangePassword: PropTypes.func.isRequired,
