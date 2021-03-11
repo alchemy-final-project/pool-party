@@ -9,17 +9,8 @@ import Dashboard from '../../containers/Dashboard';
 import AboutUs from '../../containers/AboutUs';
 import Navbar from '../header/Navbar';
 import Footer from '../footer/Footer';
-import background from '../../../public/assets/PoolParty.jpg';
 
 function App() {
-
-  const loginStyle = {
-    backgroundImage:`url(${background})`, 
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
-    marginTop: '3%',
-    width: '100%'
-  };
 
   return (
     <>

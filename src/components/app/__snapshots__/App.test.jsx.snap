@@ -41,53 +41,84 @@ exports[`App component renders App 1`] = `
         class="navItem"
       >
         <a
-          aria-current="page"
-          class="active"
-          href="/"
+          href="/login"
         >
           Login
         </a>
       </li>
     </ul>
   </nav>
-  <div>
-    <div>
-      <img
-        src="/path/image"
-      />
-    </div>
-    <div>
-      <form
-        class="loginForm"
-      >
-        <label>
-          Email
-        </label>
-        <input
-          placeholder="Enter email as username"
-          required=""
-          type="plain/text"
-          value=""
-        />
-        <label>
-          Password
-        </label>
-        <input
-          placeholder="Type Password"
-          required=""
-          type="password"
-          value=""
-        />
-        <button>
-          Log In
-        </button>
-      </form>
-    </div>
-    <a
-      href="/tenantSignUp"
+  <div
+    class="homeContainer"
+    style="background-image: url(/path/image); background-size: cover; background-repeat: no-repeat; height: 100vh;"
+  >
+    <div
+      class="HomeItems"
     >
-      Need to signup? Click here.
-    </a>
+      <h1>
+        Pineapples
+      </h1>
+      <p>
+        They are good
+      </p>
+    </div>
+  </div>
+  <div>
+    <nav
+      class="footerContainer"
+    >
+      <ul
+        class="footerMenu"
+      >
+        <li
+          class="footerItem"
+        >
+          <a
+            aria-current="page"
+            class="link active"
+            href="/"
+          >
+            Privacy Policy
+          </a>
+        </li>
+        <li
+          class="footerItem"
+        >
+          <a
+            aria-current="page"
+            class="link active"
+            href="/"
+          >
+            Terms & Conditions
+          </a>
+        </li>
+        <li
+          class="footerItem"
+        >
+          <a
+            class="link"
+            href="/aboutUs"
+          >
+            About Us
+          </a>
+        </li>
+        <li
+          class="footerItem"
+        >
+          <a
+            class="link"
+            href="/tenantSignup"
+          >
+            Sign Up
+          </a>
+        </li>
+        <li
+          class="footerItem"
+        >
+          © POOLPARTY 2021
+        </li>
+      </ul>
+    </nav>
   </div>
 </DocumentFragment>
 `;
