@@ -1,0 +1,80 @@
+@font-face {
+    font-family: 'Heebo';
+    src: url('https://fonts.googleapis.com/css2?family=Heebo:wght@900&display=swap');
+  }
+  
+  .navContainer {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8vh;
+    line-height: 2em;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 100;
+    font-family: 'Heebo', sans-serif;
+
+  }
+  
+  .navMenu {
+    padding-inline-start: 0;
+  }
+  
+  .navItem {
+    margin-left: 33px;
+    margin-right: 45px;
+    display: inline-block;
+    color: rgb(43, 44, 40);
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+  }
+  
+  .navItem img {
+    width: 24px;
+    height: auto;
+    margin-left: -1em;
+    margin-right: -1em;
+    margin-bottom: -0.4em;
+  }
+  
+  .navItem:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: rgb(43, 44, 40);
+  }
+  
+  .navItem a:link {
+    color: rgb(43, 44, 40);
+    text-decoration: none;
+  }
+  
+  .navItem a:visited {
+    text-decoration: none;
+    color: rgb(43, 44, 40);
+  }
+  
+  .logo {
+    font-size: 50px;
+    font-weight: bolder;
+    padding-left: 15px;
+    text-decoration: none;
+    color: rgb(43, 44, 40);
+  }
+  
+  .logo:hover {
+    text-decoration: none;
+    color: rgb(43, 44, 40);
+  }
+  
+  .logo a:link {
+    color: rgb(43, 44, 40);
+    text-decoration: none;
+  }
+  
+  .logo a:visited {
+    color: rgb(43, 44, 40);
+  }
+
