@@ -20,7 +20,11 @@ function TenantSignUpForm({
   return (
     <>
       <div className={styles.TenantSignUpForm}>
+<<<<<<< HEAD
         {/* <h1>SignUp</h1> */}
+=======
+        <h1>SignUp</h1>
+>>>>>>> 4c1c8bafb62a73ab6fa378e73ba4f5a529b18438
         <form
           onSubmit={signUp}>
           <OwnerDropDown
