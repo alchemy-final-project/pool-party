@@ -8,8 +8,11 @@ import {
   useElements
 } from '@stripe/react-stripe-js';
 import { post } from '../services/request';
+import cardOptions from '../components/cardElement/CreditCardEntry';
+import styles from '../components/cardElement/CreditCardEntry.css';
 
 function Payment() {
+
   const [rentYear, setRentYear] = useState('2021');
   const [rentMonth, setRentMonth] = useState('1');
   const history = useHistory();
@@ -28,27 +31,31 @@ function Payment() {
 
   const handleSubmit = async(event) => {
     event.preventDefault();
+
     const { error, paymentMethod } = await stripe.createPaymentMethod({
       type: 'card',
       card: elements.getElement(CardElement),
+      
     });
+
     post('/api/v1/transactions', {
       paymentMethodId: paymentMethod.id,
       rentYear,
       rentMonth
     });
+
     history.push('/dashboard');
   };
 
   return (
-    <div>
+    <div className={styles.StripeElement}>
       <h1>Entry Credit Card Here to Pay into the Party</h1>
       <p>Need to have a get call to get the amount</p>
       <p>/ Add the amount with a future get</p>
       <DateDropdowns
         onRentYearChange={onRentYearChange}
         onRentMonthChange={onRentMonthChange}/>
-      <CreditCardEntry handleSubmit={handleSubmit}/>
+      <CreditCardEntry className={cardOptions} handleSubmit={handleSubmit}/>
     </div>
   );
 }
