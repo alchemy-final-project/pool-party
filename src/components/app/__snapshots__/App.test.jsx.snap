@@ -50,11 +50,7 @@ exports[`App component renders App 1`] = `
   </nav>
   <div
     class="homeContainer"
-<<<<<<< HEAD
     style="background-image: url(/path/image); background-size: cover; background-repeat: no-repeat; height: 98.5vh;"
-=======
-    style="background-image: url(/path/image); background-size: cover; background-repeat: no-repeat; height: 95vh;"
->>>>>>> 4c1c8bafb62a73ab6fa378e73ba4f5a529b18438
   >
     <div
       class="HomeItems"
