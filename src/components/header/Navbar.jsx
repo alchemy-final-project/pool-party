@@ -18,7 +18,7 @@ export default function Navbar() {
             <NavLink to="/tenantSignup">Sign Up</NavLink>
           </li>
           <li className={styles.navItem}>
-            <NavLink to="/">Login</NavLink>
+            <NavLink to="/login">Login</NavLink>
           </li>
         </ul>
       </nav>
