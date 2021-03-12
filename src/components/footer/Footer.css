@@ -4,6 +4,7 @@
 }
 .footerContainer {
     font-size: small;
+    font-family: 'Heebo', sans-serif;
     background-color: rgba(17, 15, 15, 0.685);
     display: flex;
     justify-content: space-between;

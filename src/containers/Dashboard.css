@@ -1,7 +1,12 @@
+@font-face {
+  font-family: 'Heebo';
+  src: url('https://fonts.googleapis.com/css2?family=Heebo:wght@900&display=swap');
+}
+
 .Dashboard {
     background: url(../images/floaties.jpg) no-repeat center center fixed;
     background-size: cover;
-    font-family: 'Bebas Neue';
+    font-family: 'Heebo', sans-serif;
     font-size: 25px;
     color: rgb(251, 255, 248);
     letter-spacing: 1px;
