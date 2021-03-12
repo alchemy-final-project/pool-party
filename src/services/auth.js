@@ -1,4 +1,5 @@
-import { post } from "./request";
+import { post } from './request';
+import { get } from './request';
 
 export const signup = (fullName, rent, ownerId, email, password) => {
   return post('/api/v1/auth/signup', {
@@ -12,7 +13,11 @@ export const signup = (fullName, rent, ownerId, email, password) => {
 
 export const loginPost = (email, password) => {
   return post('/api/v1/auth/login', {
-    email: email,
-    password: password
+    email,
+    password
   });
-}
+};
+
+export const logout = () => {
+  return get('/api/v1/auth/logout');
+};

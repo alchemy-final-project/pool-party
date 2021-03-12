@@ -24,7 +24,7 @@ export default function Home() {
         <div className={style.Banner}>
           <div className={style.container}>
             <p className={style.aboutText}>Make Pooled Payments With Your Roomies!
-            See your roomates' payment activity and know when your pooled payments are processed.</p>
+            See your roommates' payment activity and know when your pooled payments are processed.</p>
           </div>
         </div>
       </div>
