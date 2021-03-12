@@ -14,7 +14,7 @@ export default function Home() {
         backgroundImage: `url(${imageUrl})`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
-        height: '95vh'
+        height: '98.5vh'
       }}>
         <div className={styles.HomeItems}>
           {/* <h1>Pineapples</h1>

@@ -2,11 +2,12 @@
     background: url(../images/floaties.jpg) no-repeat center center fixed;
     background-size: cover;
     font-family: 'Bebas Neue';
+    font-size: 25px;
     color: rgb(251, 255, 248);
     letter-spacing: 1px;
     text-shadow: 1px 1px 5px rgba(30, 42, 49, 0.918);
     width: 100%;
-    min-height: 1000px;
+    min-height: 921px;
     display: flex;
     flex-direction: column;
     align-items: center;
