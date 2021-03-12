@@ -32,6 +32,15 @@ exports[`App component renders App 1`] = `
         class="navItem"
       >
         <a
+          href="/payment"
+        >
+          Make a Payment
+        </a>
+      </li>
+      <li
+        class="navItem"
+      >
+        <a
           href="/tenantSignup"
         >
           Sign Up
