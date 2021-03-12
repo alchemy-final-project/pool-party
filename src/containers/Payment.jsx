@@ -74,11 +74,7 @@ function Payment() {
   };
 
   return (
-    <div style={{ 
-      backgroundImage: `url(${paymentBackground})`,
-      backgroundSize: 'cover',
-      backgroundRepeat: 'no-repeat',
-      height: '50vh' }}>
+    <div className={styles.BackgroundPayment}>
       <form className={styles.Payment} onSubmit={handleSubmit}>
         <DateDropdowns
           onRentYearChange={onRentYearChange}

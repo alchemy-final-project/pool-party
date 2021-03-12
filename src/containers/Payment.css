@@ -1,6 +1,8 @@
 .BackgroundPayment{
-  background: url(../images/water.jpg) no-repeat center center fixed;
+  background: url(../images/water.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
+  height: 50vh; 
 }
 
 .Payment {
