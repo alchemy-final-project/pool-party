@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import React from 'react';
 import styles from './AboutUs.css';
 // import background from '../images/pool-background.jpeg';
@@ -17,7 +18,7 @@ const AboutUs = () => (
           <h2 className={styles.name} >Rosalie Lee</h2>
           <p className={styles.abouttext}>
             I’m seeking opportunities that will allow me to develop and promote technologies that are innovative and benefit human health/wellbeing. Specific fields of interest include AI/ML Software Engineering, Developer Advocacy, Human Factors Engineering, and UI/UX Design.
-        </p>
+          </p>
         </div>
       </div>
 
@@ -27,8 +28,8 @@ const AboutUs = () => (
 
           <h2 className={styles.name}>Erik Graciosa</h2>
           <p className={styles.abouttext}>
-            I’m seeking opportunities that will allow me to develop and promote technologies that are innovative and benefit human health/wellbeing. Specific fields of interest include AI/ML Software Engineering, Developer Advocacy, Human Factors Engineering, and UI/UX Design.
-        </p>
+          Dependable engineer with a passion for implementing elegant displays of data in user interactive formats. A team leader in projects at HP, Microsoft and Element Six that designed, planned, and directed engineers and technicians to install and refine factory automation equipment across printing, touchscreen, and lab-grown diamond industries.
+          </p>
         </div>
       </div>
 
@@ -39,7 +40,7 @@ const AboutUs = () => (
           <h2 className={styles.name}>Katie Berry</h2>
           <p className={styles.abouttext}>
             I share many expenses with my partner, and we've had to get creative how to track our individual payments. It's great to have a method of paying rent that doesn't involve one of us paying-back the other!
-        </p>
+          </p>
         </div>
       </div>
     </div>
