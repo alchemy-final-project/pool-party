@@ -43,8 +43,12 @@ RoomateList.propTypes = {
       name: PropTypes.string.isRequired,
       monthlyCost: PropTypes.number.isRequired
     }).isRequired
+<<<<<<< HEAD
   ).isRequired,
   transactions: PropTypes.array
+=======
+  ).isRequired
+>>>>>>> c81f4afd038f54865bd5fa2983c7dae3f72a2032
 };
 
 export default RoomateList;
