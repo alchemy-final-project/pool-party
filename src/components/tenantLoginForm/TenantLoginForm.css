@@ -1,7 +1,12 @@
+@font-face {
+  font-family: 'Heebo';
+  src: url('https://fonts.googleapis.com/css2?family=Heebo:wght@900&display=swap');
+}
+
 .TenantLoginForm {
   background: url(../../images/pool-background.jpeg) no-repeat center center fixed;
   background-size: cover;
-  font-family: 'Bebas Neue';
+  font-family: 'Heebo', sans-serif;
   color: rgb(251, 255, 248);
   letter-spacing: 1px;
   text-shadow: 1px 1px 5px rgba(30, 42, 49, 0.918);
