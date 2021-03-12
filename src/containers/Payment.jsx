@@ -10,6 +10,30 @@ import {
 import { post } from '../services/request';
 // import cardOptions from '../components/cardElement/CreditCardEntry';
 import styles from './Payment.css';
+import paymentBackground from '../images/water.jpg';
+
+const cardOptions = {
+  iconStyle: 'solid',
+  hidePostalCode: false,
+  style: {
+    base: {
+      iconColor: 'rgb(240, 57, 122)',
+      color: 'rgb(240, 57, 122)',
+      fontSize: '16px',
+      fontFamily: '"Open Sans", sans-serif',
+      fontSmoothing: 'antialiased',
+      '::placeholder': {
+        color: '#CFD7DF'
+      }
+    },
+    invalid: {
+      color: '#e5424d',
+      ':focus': {
+        color: '#303238'
+      }
+    }
+  }
+};
 
 function Payment() {
 
@@ -31,30 +55,39 @@ function Payment() {
 
   const handleSubmit = async(event) => {
     event.preventDefault();
+    try {
+      const { error, paymentMethod } = await stripe.createPaymentMethod({
+        type: 'card',
+        card: elements.getElement(CardElement),
+      });
 
-    const { error, paymentMethod } = await stripe.createPaymentMethod({
-      type: 'card',
-      card: elements.getElement(CardElement),
-      
-    });
-
-    post('/api/v1/transactions', {
-      paymentMethodId: paymentMethod.id,
-      rentYear,
-      rentMonth
-    });
-
-    history.push('/dashboard');
+      await post('/api/v1/transactions', {
+        paymentMethodId: paymentMethod.id,
+        rentYear,
+        rentMonth
+      });
+      await history.push('/dashboard');
+    } catch(err) {
+      console.log(err);
+    }
+    
   };
 
   return (
-    
-    <div className={styles.FormGroup}>
-      <DateDropdowns 
-        onRentYearChange={onRentYearChange}
-        onRentMonthChange={onRentMonthChange}/>
-      <CreditCardEntry handleSubmit={handleSubmit}/>
+    <div style={{ 
+      backgroundImage: `url(${paymentBackground})`,
+      backgroundSize: 'cover',
+      backgroundRepeat: 'no-repeat',
+      height: '50vh' }}>
+      <form className={styles.Payment} onSubmit={handleSubmit}>
+        <DateDropdowns
+          onRentYearChange={onRentYearChange}
+          onRentMonthChange={onRentMonthChange}/>
+        <CardElement options={cardOptions}/>
+        <button className={styles.button} >Submit</button>
+      </form>
     </div>
+   
   );
 }
 

@@ -1,21 +1,41 @@
-.FormGroup {
-    margin: 0px 15px 20px;
-    padding: 0;
-    border-style: none;
-    background-color: #ffffff;
-    will-change: opacity, transform;
-    box-shadow: 0 6px 9px rgba(50, 50, 93, 0.06), 0 2px 5px rgba(0, 0, 0, 0.08),
-      inset 0 1px 0 #0b0bdd;
-    border-radius: 4px;
-    margin-top: 9vh;
-  }
+.BackgroundPayment{
+  background: url(../images/water.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+.Payment {
+  position: relative;
+  top: unset;
+  margin: auto;
+  margin-top: calc( 50% - 10rem);
+  height: 10rem;
   
-  .FormRow {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-align: center;
-    align-items: center;
-    margin-left: 15px;
-    border-top: 1px solid #0d0e11;
+  
+  div:first-child {
+    display:flex;
+    justify-content: center;
+    padding: 0.5rem;
+    text-align: center;
+    select{
+    padding: 0.5rem;
+    }
   }
 
+  :global(.StripeElement) {
+    padding: 1rem 0.5rem;
+  }
+
+  button {
+    width: 100%;
+    background:  rgba(255, 253, 115, 0.973);
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    text-transform: uppercase;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin-bottom: 0px;
+  }
+}
