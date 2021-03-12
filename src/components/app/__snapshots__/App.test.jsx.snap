@@ -73,7 +73,7 @@ exports[`App component renders App 1`] = `
         <p
           class="aboutText"
         >
-          Make Pooled Payments With Your Roomies! See your roomates' payment activity and know when your pooled payments are processed.
+          Make Pooled Payments With Your Roomies! See your roommates' payment activity and know when your pooled payments are processed.
         </p>
       </div>
     </div>
