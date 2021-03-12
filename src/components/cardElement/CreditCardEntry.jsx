@@ -46,8 +46,8 @@ function CreditCardEntry({ handleSubmit }) {
   );
 }
 
-CreditCardEntry.propTypes = {
-  handleSubmit: PropTypes.func.isRequired
-};
+// CreditCardEntry.propTypes = {
+//   handleSubmit: PropTypes.func.isRequired
+// };
 
-export default CreditCardEntry;
+// export default CreditCardEntry;

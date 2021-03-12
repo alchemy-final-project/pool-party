@@ -1,17 +1,19 @@
 .BackgroundPayment{
-  background: url(../images/water.jpg);
+  background: url(../images/water.jpg) ;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 50vh; 
+  height: 100vh; 
 }
 
 .Payment {
   position: relative;
   top: unset;
   margin: auto;
-  margin-top: calc( 50% - 10rem);
+  margin-top: calc( 15% - 10rem);
   height: 10rem;
-  
+  max-width: 500px;
+  padding: 20px;
+  background-color: rgba(17, 15, 15, 0.685);
   
   div:first-child {
     display:flex;
