@@ -8,18 +8,17 @@ const RoomateList = ({ transactions }) => {
   const roomateElements = transactions.map(transactions => (
     <div key={transactions.id} className={styles.container}>
       <img src={beachball_balloon} alt="beachball" />
-      <li key={transactions.id} >
+      <li>
         {transactions.name}'s Monthly Cost Is
-      </li >
+      </li>
       <li
-        key={transactions.id}
         style={{
           color: 'magenta',
           fontSize: '30px',
           fontWeight: 'bold'
         }}>
 
-                ${transactions.monthly_cost}
+                ${transactions.monthly_cost}:
       </li>
 
       <li>{transactions.payment_confirmed === true
@@ -33,7 +32,9 @@ const RoomateList = ({ transactions }) => {
 
   return (
 
-    <ul className={styles.RoomateList} style={{ marginTop: '200px', minHeight: '300px' }}
+    <ul
+      className={styles.RoomateList}
+      style={{ marginTop: '200px', minHeight: '300px' }}
       data-testid="roomates">
       <div className={styles.container}
         style={{

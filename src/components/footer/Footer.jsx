@@ -1,10 +1,16 @@
 /* eslint-disable max-len */
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useHistory } from 'react-router-dom';
 import styles from './Footer.css';
 // import footerIcon from '../../../public/assets/PoolPartyIcon.png';
+import { logout } from '../../services/auth';
 
 export default function Footer() {
+  const history = useHistory();
+  const onClick = () => {
+    logout()
+      .then(() => history.push('./'));
+  };
 
   return (
     <nav className={styles.footerContainer}>
@@ -23,8 +29,11 @@ export default function Footer() {
           <NavLink className="link" to="/tenantSignup">Sign Up</NavLink>
         </li>
         <li className={styles.footerItem}>
+          <span className="link" onClick={onClick}>Sign Out</span>
+        </li>
+        <li className={styles.footerItem}>
           © POOLPARTY 2021
-          </li>
+        </li>
       </ul>
     </nav>
   );
