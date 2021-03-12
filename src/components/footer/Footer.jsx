@@ -7,27 +7,25 @@ import styles from './Footer.css';
 export default function Footer() {
 
   return (
-    <div>
-      <nav className={styles.footerContainer}>
-        {/* <img className={styles.footerIcon} src={footerIcon}></img> */}
-        <ul className={styles.footerMenu}>
-          <li className={styles.footerItem}>
-            <NavLink className="link" to="/">Privacy Policy</NavLink>
-          </li>
-          <li className={styles.footerItem}>
-            <NavLink className="link" to="/">Terms & Conditions</NavLink>
-          </li>
-          <li className={styles.footerItem}>
-            <NavLink className="link" to="/aboutUs">About Us</NavLink>
-          </li>
-          <li className={styles.footerItem}>
-            <NavLink className="link" to="/tenantSignup">Sign Up</NavLink>
-          </li>
-          <li className={styles.footerItem}>
+    <nav className={styles.footerContainer}>
+      {/* <img className={styles.footerIcon} src={footerIcon}></img> */}
+      <ul className={styles.footerMenu}>
+        <li className={styles.footerItem}>
+          <NavLink className="link" to="/">Privacy Policy</NavLink>
+        </li>
+        <li className={styles.footerItem}>
+          <NavLink className="link" to="/">Terms & Conditions</NavLink>
+        </li>
+        <li className={styles.footerItem}>
+          <NavLink className="link" to="/aboutUs">About Us</NavLink>
+        </li>
+        <li className={styles.footerItem}>
+          <NavLink className="link" to="/tenantSignup">Sign Up</NavLink>
+        </li>
+        <li className={styles.footerItem}>
           © POOLPARTY 2021
           </li>
-        </ul>
-      </nav>
-    </div>
+      </ul>
+    </nav>
   );
 }

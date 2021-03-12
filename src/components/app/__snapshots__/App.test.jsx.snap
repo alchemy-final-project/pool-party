@@ -64,63 +64,74 @@ exports[`App component renders App 1`] = `
     <div
       class="HomeItems"
     />
-  </div>
-  <div>
-    <nav
-      class="footerContainer"
+    <div
+      class="Banner"
     >
-      <ul
-        class="footerMenu"
+      <div
+        class="container"
       >
-        <li
-          class="footerItem"
+        <p
+          class="aboutText"
         >
-          <a
-            aria-current="page"
-            class="link active"
-            href="/"
-          >
-            Privacy Policy
-          </a>
-        </li>
-        <li
-          class="footerItem"
-        >
-          <a
-            aria-current="page"
-            class="link active"
-            href="/"
-          >
-            Terms & Conditions
-          </a>
-        </li>
-        <li
-          class="footerItem"
-        >
-          <a
-            class="link"
-            href="/aboutUs"
-          >
-            About Us
-          </a>
-        </li>
-        <li
-          class="footerItem"
-        >
-          <a
-            class="link"
-            href="/tenantSignup"
-          >
-            Sign Up
-          </a>
-        </li>
-        <li
-          class="footerItem"
-        >
-          © POOLPARTY 2021
-        </li>
-      </ul>
-    </nav>
+          Make Pooled Payments With Your Roomies! See your roomates' payment activity and know when your pooled payments are processed.
+        </p>
+      </div>
+    </div>
   </div>
+  <nav
+    class="footerContainer"
+  >
+    <ul
+      class="footerMenu"
+    >
+      <li
+        class="footerItem"
+      >
+        <a
+          aria-current="page"
+          class="link active"
+          href="/"
+        >
+          Privacy Policy
+        </a>
+      </li>
+      <li
+        class="footerItem"
+      >
+        <a
+          aria-current="page"
+          class="link active"
+          href="/"
+        >
+          Terms & Conditions
+        </a>
+      </li>
+      <li
+        class="footerItem"
+      >
+        <a
+          class="link"
+          href="/aboutUs"
+        >
+          About Us
+        </a>
+      </li>
+      <li
+        class="footerItem"
+      >
+        <a
+          class="link"
+          href="/tenantSignup"
+        >
+          Sign Up
+        </a>
+      </li>
+      <li
+        class="footerItem"
+      >
+        © POOLPARTY 2021
+      </li>
+    </ul>
+  </nav>
 </DocumentFragment>
 `;

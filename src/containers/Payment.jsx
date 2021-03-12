@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import CreditCardEntry from '../components/cardElement/CreditCardEntry';
 import DateDropdowns from '../components/dateDropdowns/DateDropdowns';
 import {
   CardElement,
@@ -7,7 +8,9 @@ import {
   useElements
 } from '@stripe/react-stripe-js';
 import { post } from '../services/request';
+// import cardOptions from '../components/cardElement/CreditCardEntry';
 import styles from './Payment.css';
+import paymentBackground from '../images/water.jpg';
 
 const cardOptions = {
   iconStyle: 'solid',

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import TenantLoginForm from '../components/tenantLoginForm/TenantLoginForm';
 import { loginPost } from '../services/auth.js';
 
@@ -20,7 +20,6 @@ function TenantLogin() {
     event.preventDefault();
     loginPost(email, password)
       .then(() => history.push('./dashboard'));
-    
   };
 
   return (

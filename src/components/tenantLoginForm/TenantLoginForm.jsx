@@ -35,7 +35,17 @@ function TenantLoginForm({
 
           <button>Log In</button>
 
-          <Link to="/tenantSignUp" style={{ fontFamily: "Bebas Neue", color: "rgb(251, 255, 248)", justifyContent: "center" }}>Need to signup? Click here</Link>
+          <Link to="/tenantSignUp"
+            style={{
+              fontFamily: "Bebas Neue",
+              color: "rgb(251, 255, 248)",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              textAlign: "center"
+            }}>
+            Need to signup? Click here
+            </Link>
         </form>
       </div>
     </>
