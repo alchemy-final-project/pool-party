@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import CreditCardEntry from '../components/cardElement/CreditCardEntry';
 import DateDropdowns from '../components/dateDropdowns/DateDropdowns';
 import {
   CardElement,
@@ -10,7 +9,31 @@ import {
 import { post } from '../services/request';
 import styles from './Payment.css';
 
+const cardOptions = {
+  iconStyle: 'solid',
+  hidePostalCode: false,
+  style: {
+    base: {
+      iconColor: 'rgb(240, 57, 122)',
+      color: 'rgb(240, 57, 122)',
+      fontSize: '16px',
+      fontFamily: '"Open Sans", sans-serif',
+      fontSmoothing: 'antialiased',
+      '::placeholder': {
+        color: '#CFD7DF'
+      }
+    },
+    invalid: {
+      color: '#e5424d',
+      ':focus': {
+        color: '#303238'
+      }
+    }
+  }
+};
+
 function Payment() {
+
   const [rentYear, setRentYear] = useState('2021');
   const [rentMonth, setRentMonth] = useState('1');
   const history = useHistory();
@@ -48,18 +71,16 @@ function Payment() {
   };
 
   return (
-    <div className={styles.Payment}>
-      {/* <h1>Entry Credit Card Here to Pay into the Party</h1> */}
-
-      <p>Need to have a get call to get the amount</p>
-      <p>/ Add the amount with a future get</p>
-
-      <DateDropdowns
-        onRentYearChange={onRentYearChange}
-        onRentMonthChange={onRentMonthChange} />
-
-      <CreditCardEntry handleSubmit={handleSubmit} />
+    <div className={styles.BackgroundPayment}>
+      <form className={styles.Payment} onSubmit={handleSubmit}>
+        <DateDropdowns
+          onRentYearChange={onRentYearChange}
+          onRentMonthChange={onRentMonthChange}/>
+        <CardElement options={cardOptions}/>
+        <button className={styles.button} >Submit</button>
+      </form>
     </div>
+   
   );
 }
 

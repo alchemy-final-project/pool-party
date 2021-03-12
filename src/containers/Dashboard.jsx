@@ -11,7 +11,6 @@ const Dashboard = () => {
   if (loading) return <h1>Loading</h1>;
   return <div className={styles.Dashboard}>
 
-    {/* <h1>Dashboard</h1> */}
     <RoomateList
       roomates={roomates}
       transactions={transactions} />

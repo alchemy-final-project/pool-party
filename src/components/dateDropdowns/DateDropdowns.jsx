@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './DateDropdowns.css';
 
 function DateDropdowns({ onRentYearChange, onRentMonthChange }) {
 
@@ -16,12 +17,12 @@ function DateDropdowns({ onRentYearChange, onRentMonthChange }) {
 
   return (
     <div>
-      <label>Month
+      <label className={styles.label}>Month
         <select onChange={(event) => onRentMonthChange(event.target.value)}>
           {monthsHtml}
         </select>
       </label>
-      <label>Years
+      <label className={styles.label}>Years
         <select onChange={(event) => onRentYearChange(event.target.value)}>
           {yearsHtml}
         </select>

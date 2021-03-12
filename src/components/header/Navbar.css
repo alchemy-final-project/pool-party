@@ -12,7 +12,7 @@
     line-height: 2em;
     position: fixed;
     top: 0px;
-    width: 100%;
+    width: calc(100% - 16px);
     z-index: 100;
     font-family: 'Heebo', sans-serif;
   }
@@ -54,7 +54,6 @@
     text-decoration: none;
     color: rgb(43, 44, 40);
   }
-
   .logo {
     font-size: 50px;
     font-weight: bolder;
@@ -77,6 +76,3 @@
     color: rgb(43, 44, 40);
   }
 
-  .logo:active {
-    background-color: rgba(114, 17, 98, 0.678);
-}

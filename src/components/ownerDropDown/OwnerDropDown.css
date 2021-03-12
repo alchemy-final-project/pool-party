@@ -5,8 +5,14 @@ label, input, button {
   
   label {
     font-size: 20px;
+    font-family: '"Open Sans", sans-serif';
   }
   
+  header {
+    font-size: large;
+    font-weight: 100;
+  }
+
   select {
     width: 100%;
     padding: 20px;

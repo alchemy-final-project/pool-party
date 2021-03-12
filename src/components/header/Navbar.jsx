@@ -15,6 +15,9 @@ export default function Navbar() {
             <NavLink to="/aboutUs">About Us</NavLink>
           </li>
           <li className={styles.navItem}>
+            <NavLink to="/payment">Make a Payment</NavLink>
+          </li>
+          <li className={styles.navItem}>
             <NavLink to="/tenantSignup">Sign Up</NavLink>
           </li>
           <li className={styles.navItem}>
