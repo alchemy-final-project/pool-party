@@ -2,14 +2,16 @@
   background: url(../images/water.jpg) ;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh; 
+  height: 100vh;
+  position: absolute;
+  width: calc(100% - 16px);
 }
 
 .Payment {
   position: relative;
   top: unset;
   margin: auto;
-  margin-top: calc( 15% - 10rem);
+  margin-top: calc( 50vh - 10rem);
   height: 10rem;
   max-width: 500px;
   padding: 20px;
