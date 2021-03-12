@@ -129,6 +129,15 @@ exports[`App component renders App 1`] = `
       <li
         class="footerItem"
       >
+        <span
+          class="link"
+        >
+          Sign Out
+        </span>
+      </li>
+      <li
+        class="footerItem"
+      >
         © POOLPARTY 2021
       </li>
     </ul>
