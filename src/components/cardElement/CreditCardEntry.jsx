@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 import {
   CardElement
 } from '@stripe/react-stripe-js';
-import styles from './CreditCardEntry.css';
-
+import '../cardElement/CreditCardEntry.css';
 
 const cardOptions = {
   iconStyle: 'solid',
@@ -34,12 +33,10 @@ function CreditCardEntry({ handleSubmit }) {
 
   return (
     <div>
-      <fieldset className={styles.FormGroup}>
-        <form className={styles.FormRow} onSubmit={handleSubmit}>
-          <CardElement options={cardOptions}/>
-          <button>Submit</button>
-        </form>
-      </fieldset>
+      <form onSubmit={handleSubmit}>
+        <CardElement options={cardOptions}/>
+        <button>Submit</button>
+      </form>
     </div>
   );
 }

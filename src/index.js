@@ -4,7 +4,6 @@ import App from './components/app/App';
 import {
   Elements
 } from '@stripe/react-stripe-js';
-
 import { loadStripe } from '@stripe/stripe-js';
 
 // Make sure to call `loadStripe` outside of a component’s render to avoid
@@ -12,7 +11,7 @@ import { loadStripe } from '@stripe/stripe-js';
 const stripePromise = loadStripe('pk_test_51IQLH1AlZQgGODSJBkoELcpjSB9liGgfLpot9mWQER1Cv9RCBpLnvhdrDPORukS3YQoeQ4OHq04EC95pX1GrnAHY00rW9sayk4');
 
 render(
-  
+
   <Elements stripe={stripePromise}>
     <App />
   </Elements>,

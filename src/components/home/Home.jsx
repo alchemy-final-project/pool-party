@@ -10,17 +10,18 @@ export default function Home() {
 
   return (
     <>
-      <div className={styles.homeContainer} style={{ 
+      <div className={styles.homeContainer} style={{
         backgroundImage: `url(${imageUrl})`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
-        height: '100vh' }}>
+        height: '98.5vh'
+      }}>
         <div className={styles.HomeItems}>
-          <h1>Pineapples</h1>
-          <p>They are good</p>
+          {/* <h1>Pineapples</h1>
+          <p>They are good</p> */}
         </div>
       </div>
-         
+
     </>
   );
 }

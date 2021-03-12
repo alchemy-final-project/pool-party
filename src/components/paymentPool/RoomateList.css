@@ -1,4 +1,29 @@
 .RoomateList {
-    display: flexbox;
+
+  li {
+    list-style: none;
+    display: flex;
     flex-wrap: wrap;
+    padding: 5px;
+  }
+
+  img {
+    display: flex;
+    margin-left: 20px;
+    margin-right: 30px;
+    padding: 10px;
+    height: 80px;
+    width: 80px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    margin-left: 30px;
+    margin-right: 50px;;
+    background-color: rgba(17, 15, 15, 0.685);
+    width: 600px;
+    min-height: 70px;
+    align-items: center;
+    }
   }

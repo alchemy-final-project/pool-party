@@ -1,0 +1,25 @@
+.OwnerDropDown {
+label, input, button {
+    margin: auto;
+  }
+  
+  label {
+    font-size: 20px;
+  }
+  
+  select {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom: 25px;
+    border: 2px solid #e9eaea;
+    color: #3e3e40;
+    font-size: 16px;
+    outline: none;
+    transform: all 0.5s ease;
+  }
+  
+  select:focus {
+    border: 5px solid magenta;
+  }
+}

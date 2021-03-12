@@ -1,22 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useRoomates } from './Roomates';
+import styles from './RoomateList.css';
+import beachball_balloon from '../../images/beachball_balloon.png';
 
 const RoomateList = ({ roomates }) => {
     const roomateElements = roomates.map(roomate => (
-        <>
-            <li key={roomate.id}>
-                {roomate.name}
+        <div className={styles.container}>
+            <img src={beachball_balloon} alt="beachball" />
+            <li key={roomate.id} >
+                {roomate.name}'s Monthly Cost Is
             </li >
 
-            <li key={roomate.id}>
-                {roomate.monthlyCost}
+            <li key={roomate.id} style={{ color: "magenta", fontSize: "30px", fontWeight: "bold" }}>
+                ${roomate.monthlyCost}
             </li>
-        </>
+        </div >
     ));
 
-    return <ul
-        // className={`${styles.RoomateList}`}
+    return <ul className={styles.RoomateList} style={{ marginTop: "300px", minHeight: "300px" }}
         data-testid="roomates">
         {roomateElements}
     </ul>

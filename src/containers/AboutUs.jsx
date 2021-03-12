@@ -1,41 +1,44 @@
 import React from 'react';
 import styles from './AboutUs.css';
-import img from '../images/beachball.jpg';
+// import background from '../images/pool-background.jpeg';
+// import img from '../images/beachball.jpg';
+import katie from '../images/beanie.jpg';
+import rosalie from '../images/rosalie.jpg';
+import erik from '../images/erik.jpg';
 
 const AboutUs = () => (
   <div>
     <div className={styles.AboutUs}>
-      <h1>About Us</h1>
-      <div className={styles.container}>
-        <img
-          src={img} type='image' alt="beachball" />
+      {/* <h1>About Us</h1> */}
+      <div className={styles.container} style={{ marginTop: "9vh" }}>
+        <img src={rosalie} type='image' alt="beachball" />
         <div className={styles.nametext}>
 
-          <h2 className={styles.name}>Rosalie Lee</h2>
+          <h2 className={styles.name} >Rosalie Lee</h2>
           <p className={styles.abouttext}>
-            Rosalie is awesome!
+            I’m seeking opportunities that will allow me to develop and promote technologies that are innovative and benefit human health/wellbeing. Specific fields of interest include AI/ML Software Engineering, Developer Advocacy, Human Factors Engineering, and UI/UX Design.
         </p>
         </div>
       </div>
 
       <div className={styles.container}>
-        <img src={img} type='image' alt="beachball" />
+        <img src={erik} type='image' alt="beachball" />
         <div className={styles.nametext}>
 
           <h2 className={styles.name}>Erik Graciosa</h2>
           <p className={styles.abouttext}>
-            Erik is awesome!
+            I’m seeking opportunities that will allow me to develop and promote technologies that are innovative and benefit human health/wellbeing. Specific fields of interest include AI/ML Software Engineering, Developer Advocacy, Human Factors Engineering, and UI/UX Design.
         </p>
         </div>
       </div>
 
       <div className={styles.container}>
-        <img src={img} type='image' alt="beachball" />
+        <img src={katie} type='image' alt="Katie Berry" />
         <div className={styles.nametext}>
 
           <h2 className={styles.name}>Katie Berry</h2>
           <p className={styles.abouttext}>
-            Katie is awesome!
+            I’m seeking opportunities that will allow me to develop and promote technologies that are innovative and benefit human health/wellbeing. Specific fields of interest include AI/ML Software Engineering, Developer Advocacy, Human Factors Engineering, and UI/UX Design.
         </p>
         </div>
       </div>

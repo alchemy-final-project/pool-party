@@ -1,0 +1,38 @@
+.Dashboard {
+    background: url(../images/floaties.jpg) no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Bebas Neue';
+    font-size: 25px;
+    color: rgb(251, 255, 248);
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 5px rgba(30, 42, 49, 0.918);
+    width: 100%;
+    min-height: 921px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+  h1 {
+      font-size: 3rem;
+      padding: 10px;
+      width: 100%;
+      background-color: rgba(17, 15, 15, 0.685);
+      text-align: center;
+  }
+  
+  button {
+    width: 200px;
+    background:  rgba(255, 253, 115, 0.973);
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    text-transform: uppercase;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin-bottom: 30px;
+  }
+   
+  }
+  

@@ -15,7 +15,6 @@
     width: 100%;
     z-index: 100;
     font-family: 'Heebo', sans-serif;
-
   }
   
   .navMenu {
@@ -55,7 +54,6 @@
     text-decoration: none;
     color: rgb(43, 44, 40);
   }
-  
   .logo {
     font-size: 50px;
     font-weight: bolder;
@@ -77,4 +75,3 @@
   .logo a:visited {
     color: rgb(43, 44, 40);
   }
-
