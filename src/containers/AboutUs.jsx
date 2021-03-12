@@ -38,7 +38,7 @@ const AboutUs = () => (
 
           <h2 className={styles.name}>Katie Berry</h2>
           <p className={styles.abouttext}>
-            I’m seeking opportunities that will allow me to develop and promote technologies that are innovative and benefit human health/wellbeing. Specific fields of interest include AI/ML Software Engineering, Developer Advocacy, Human Factors Engineering, and UI/UX Design.
+            I share many expenses with my partner, and we've had to get creative how to track our individual payments. It's great to have a method of paying rent that doesn't involve one of us paying-back the other!
         </p>
         </div>
       </div>
