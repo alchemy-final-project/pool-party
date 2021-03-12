@@ -17,7 +17,7 @@ const Dashboard = () => {
       transactions={transactions} />
 
     <button onClick={() => history.push('./payment')}>Pay your bill</button>
-  </div>);
+  </div>;
 };
 
 export default Dashboard;
