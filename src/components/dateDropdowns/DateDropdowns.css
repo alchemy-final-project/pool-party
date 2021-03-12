@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Heebo';
+  src: url('https://fonts.googleapis.com/css2?family=Heebo:wght@900&display=swap');
+}
+
 .label, .input, .button {
     margin: auto;
     
@@ -6,7 +11,7 @@
   .label {
     font-size: 16px;
     font-weight: lighter;
-    font-family: sans-serif;
+    font-family: 'Heebo', sans-serif;
     color: rgb(255, 255, 255);
     justify-content: space-between;
     margin-left: auto;
