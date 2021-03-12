@@ -1,14 +1,15 @@
-// import React from 'react';
-// import PropTypes from 'prop-types';
-// import {
-//   CardElement
-// } from '@stripe/react-stripe-js';
-// import './CreditCardEntry.css';
+import React from 'react';
+import PropTypes from 'prop-types';
+import {
+  CardElement
+} from '@stripe/react-stripe-js';
+import '../cardElement/CreditCardEntry.css';
+import styles from '../../containers/Payment.css';
+import DateDropdowns from '../dateDropdowns/DateDropdowns';
 
-
-// const CARD_ELEMENT_OPTIONS = {
+// const cardOptions = {
 //   iconStyle: 'solid',
-//   hidePostalCode: true,
+//   hidePostalCode: false,
 //   style: {
 //     base: {
 //       iconColor: 'rgb(240, 57, 122)',
@@ -29,17 +30,21 @@
 //   }
 // };
 
-// function CreditCardEntry({ handleSubmit }) {
-//   return (
-//     <div>
-{/* <form onSubmit={handleSubmit}>
-        <CardElement options={CARD_ELEMENT_OPTIONS} />
 
-        <button>Submit</button> */}
-{/* </form> */ }
-//     </div>
-//   );
-// }
+function CreditCardEntry({ handleSubmit }) {
+
+  return (
+    <div className={styles.FormGroup}>
+      {/* <form id="" card onSubmit={handleSubmit}>
+        <DateDropdowns
+          onRentYearChange={onRentYearChange}
+          onRentMonthChange={onRentMonthChange}/>
+        <CardElement options={cardOptions}/>
+        <button className={styles.button} >Submit</button>
+      </form> */}
+    </div>
+  );
+}
 
 // CreditCardEntry.propTypes = {
 //   handleSubmit: PropTypes.func.isRequired
