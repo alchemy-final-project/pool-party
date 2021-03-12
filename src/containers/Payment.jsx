@@ -27,18 +27,24 @@ function Payment() {
   const stripe = useStripe();
   const elements = useElements();
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async(event) => {
     event.preventDefault();
-    const { error, paymentMethod } = await stripe.createPaymentMethod({
-      type: 'card',
-      card: elements.getElement(CardElement),
-    });
-    post('/api/v1/transactions', {
-      paymentMethodId: paymentMethod.id,
-      rentYear,
-      rentMonth
-    });
-    history.push('/dashboard');
+    try {
+      const { error, paymentMethod } = await stripe.createPaymentMethod({
+        type: 'card',
+        card: elements.getElement(CardElement),
+      });
+
+      await post('/api/v1/transactions', {
+        paymentMethodId: paymentMethod.id,
+        rentYear,
+        rentMonth
+      });
+      await history.push('/dashboard');
+    } catch(err) {
+      console.log(err);
+    }
+    
   };
 
   return (

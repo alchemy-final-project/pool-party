@@ -43,7 +43,7 @@ function TenantSignUp() {
   const signUp = (event) => {
     event.preventDefault();
     signup(fullName, rent, selectedOwner, email, password)
-    history.push('/dashboard');
+      .then(() => history.push('./dashboard'));
   };
 
   return (
