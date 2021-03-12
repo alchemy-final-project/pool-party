@@ -12,11 +12,17 @@ const RoomateList = ({ transactions }) => {
       </li >
             <li
                 key={transactions.id}
-                style={{ color: 'magenta', fontSize: '30px', fontWeight: 'bold' }}>
+                style={{
+                    color: 'magenta',
+                    fontSize: '30px',
+                    fontWeight: 'bold'
+                }}>
+
                 ${transactions.monthly_cost}
             </li>
+
             <li>{transactions.payment_confirmed === true
-                ? 'Payments Processed'
+                ? 'Payment Processed'
                 : transactions.payment_confirmed != null
                     ? 'Payment in Queue'
                     : 'Unpaid'}
@@ -28,8 +34,16 @@ const RoomateList = ({ transactions }) => {
 
         <ul className={styles.RoomateList} style={{ marginTop: '200px', minHeight: '300px' }}
             data-testid="roomates">
-            <li className={styles.container}>
-                Roommate Payment Status</li>
+            <div className={styles.container}
+                style={{
+                    textAlign: "center",
+                    display: "block",
+                    paddingTop: "25px",
+                    fontSize: '30px',
+                    fontWeight: 'bold',
+                    textDecoration: "underline"
+                }}>
+                Roommate Payment Status</div>
             {roomateElements}
         </ul>
 
