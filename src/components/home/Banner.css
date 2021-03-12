@@ -13,6 +13,7 @@
     margin: 25px;
     font-size: 2.5rem;
     color: rgb(251, 255, 248);
+    letter-spacing: .5px;
 }
 
 .container {
@@ -26,5 +27,4 @@
     height: 300px;
     width: 800px;
 }
-
 }

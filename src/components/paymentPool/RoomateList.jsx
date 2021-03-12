@@ -18,7 +18,7 @@ const RoomateList = ({ transactions }) => {
                     fontWeight: 'bold'
                 }}>
 
-                ${transactions.monthly_cost}
+                ${transactions.monthly_cost}:
             </li>
 
             <li>{transactions.payment_confirmed === true
